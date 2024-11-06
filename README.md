@@ -508,58 +508,58 @@ Esta estructura de CSS es modular y clara, separando los estados de normal y hov
 
 ### HABILIDADES
 
-**Escribir tu primer componente de React:**
+**--Escribir tu primer componente de React:**
 
 Se ha creado el componente Lottery donde se muestra la interfaz básica de la lotería.
 
-**Crear archivos con múltiples componentes:**
+**--Crear archivos con múltiples componentes:**
 
 El proyecto incluye múltiples componentes, como Lottery, NumberSetsSelection (selección de números) y el componente principal App que gestiona los resultados.
 
-**Añadir marcado a JavaScript con JSX:**
+**--Añadir marcado a JavaScript con JSX:**
 
 Se usa JSX para estructurar la interfaz de la aplicación y renderizar los conjuntos de números y el resultado del sorteo.
 
-**Añadir llaves con JSX:**
+**--Añadir llaves con JSX:**
 
 Se utiliza {} en JSX para insertar expresiones de JavaScript, como los números dentro de los conjuntos.
 
-**Configurar componentes con props:**
+**--Configurar componentes con props:**
 
 En NumberSetsSelection, se pasan las propiedades (props) numberSets y handleSelectSet para personalizar el conjunto de números y gestionar la selección.
 
-**Renderizar condicionalmente:**
+**--Renderizar condicionalmente:**
 
 Se muestra un mensaje diferente según si el usuario ha ganado o no, utilizando condicionales dentro del JSX (usando isWinner).
 
-**Renderizar múltiples componentes a la vez:**
+**--Renderizar múltiples componentes a la vez:**
 
 Se usa map para iterar sobre los conjuntos de números y generar dinámicamente un botón para cada conjunto.
 
-**Mantener componentes puros:**
+**--Mantener componentes puros:**
 
 Los componentes como NumberSetsSelection son "componentes puros", es decir, no modifican directamente el estado, solo invocan funciones recibidas por props para hacerlo.
 
-**Entender la UI como árboles:**
+**--Entender la UI como árboles:**
 
 La UI está organizada de manera jerárquica, con Lottery como componente raíz, App para gestionar el estado, y NumberSetsSelection para la selección de números.
 
-**Controlar eventos del usuario:**
+**--Controlar eventos del usuario:**
 
 Se gestionan eventos como la selección de un conjunto de números y la acción de comprobar si el usuario ha ganado a través de funciones como handleSelectSet y handleCheckWinner.
 
-**Gestionar el estado:**
+**--Gestionar el estado:**
 
 Se utiliza useState para manejar el estado de la selección de números (selectedSetIndex), el estado de ganancia (isWinner), y el conjunto de números sorteados (winningSet).
 
-**Actualizar un array en el estado:**
+**--Actualizar un array en el estado:**
 
 Los números sorteados y seleccionados se almacenan en arrays dentro del estado, y se actualizan cuando el usuario interactúa con la aplicación.
 
-**Levantar el estado:**
+**--Levantar el estado:**
 
 El estado relacionado con la selección de números y el resultado del sorteo se "levanta" al componente principal (App), que coordina la interacción entre los distintos componentes.
 
-**Efectos opcionales:**
+**--Efectos opcionales:**
 
 Aunque no se utiliza useEffect de manera avanzada en este ejemplo, se menciona para el posible uso de animaciones o la temporización entre el sorteo y la visualización de los resultados. Podrías expandir esto en el futuro.
