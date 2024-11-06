@@ -508,45 +508,41 @@ Esta estructura de CSS es modular y clara, separando los estados de normal y hov
 
 ### HABILIDADES
 
-**1. Escribir tu primer componente de React** 
-El componente App y el componente NumberSetsSelection son ejemplos de componentes básicos escritos en React, donde se permite al usuario seleccionar números y ver el resultado del sorteo.
+**Escribir tu primer componente de React:**
 
-**2. Crear archivos con múltiples componentes**
-Se crearon varios componentes: App, NumberSetsSelection, y se sugirieron otros como WinningNumbers y Lottery para separar las funcionalidades.
+Se ha creado el componente Lottery donde se muestra la interfaz básica de la lotería.
+**Crear archivos con múltiples componentes:**
 
-**3. Añadir marcado a JavaScript con JSX**
-Todo el código dentro de los componentes está escrito con JSX, que permite la mezcla de HTML y JavaScript. Se usan expresiones como {} para insertar variables y resultados dentro del marcado.
+El proyecto incluye múltiples componentes, como Lottery, NumberSetsSelection (selección de números) y el componente principal App que gestiona los resultados.
+**Añadir marcado a JavaScript con JSX:**
 
-**4. Añadir llaves con JSX**
-En JSX, se usan las llaves {} para insertar expresiones de JavaScript dentro del HTML, como los conjuntos de números y los resultados.
+Se usa JSX para estructurar la interfaz de la aplicación y renderizar los conjuntos de números y el resultado del sorteo.
+**Añadir llaves con JSX:**
 
-**5. Configurar componentes con props**
-Los props se usan para pasar información entre los componentes. Por ejemplo, el componente NumberSetsSelection recibe el conjunto de números (numberSets) y una función para manejar la selección (handleSelectSet).
+Se utiliza {} en JSX para insertar expresiones de JavaScript, como los números dentro de los conjuntos.
+**Configurar componentes con props:**
 
-**6. Renderizar condicionalmente**
-Se renderizan mensajes condicionales usando el valor de isWinner. Si el usuario gana, se muestra un mensaje; si no, otro mensaje.
+En NumberSetsSelection, se pasan las propiedades (props) numberSets y handleSelectSet para personalizar el conjunto de números y gestionar la selección.
+**Renderizar condicionalmente:**
 
-**7. Renderizar múltiples componentes a la vez**
-Se usa .map() para renderizar dinámicamente los botones correspondientes a cada conjunto de números disponibles.
+Se muestra un mensaje diferente según si el usuario ha ganado o no, utilizando condicionales dentro del JSX (usando isWinner).
+**Renderizar múltiples componentes a la vez:**
 
-**8. Mantener componentes puros**
-Los componentes de selección de números no modifican directamente el estado. En cambio, el estado se maneja en el componente App y se pasa a los componentes secundarios mediante props.
+Se usa map para iterar sobre los conjuntos de números y generar dinámicamente un botón para cada conjunto.
+**Mantener componentes puros:**
 
-**9. Entender la UI como árboles**
-La estructura de los componentes está organizada de forma jerárquica. El componente principal (App) incluye otros componentes como NumberSetsSelection y los mensajes de resultados.
+Los componentes como NumberSetsSelection son "componentes puros", es decir, no modifican directamente el estado, solo invocan funciones recibidas por props para hacerlo.
+**Entender la UI como árboles:**
 
-**10. Controlar eventos del usuario**
-Se manejan eventos de usuario como la selección de números y el clic en el botón para comprobar si el usuario ha ganado.
+La UI está organizada de manera jerárquica, con Lottery como componente raíz, App para gestionar el estado, y NumberSetsSelection para la selección de números.
+**Controlar eventos del usuario:**
 
-**11. Gestionar el estado**
-El estado de los números seleccionados, el conjunto ganador y el resultado del sorteo (si el usuario ganó o no) se gestionan usando el hook useState.
-
-**12. Actualizar un array en el estado**
-El estado de winningSet y selectedSetIndex se actualiza correctamente para reflejar el conjunto ganador y el conjunto seleccionado por el usuario.
-
-**13. Levantar el estado**
-El estado de los números seleccionados por el usuario y los resultados del sorteo se levantan al componente principal (App), y se pasan a los componentes secundarios como props.
-
-**14. Efectos opcionales**
-Se usa useEffect para generar aleatoriamente el conjunto ganador cuando se monta el componente, cumpliendo con el requisito de usar efectos para manejar el sorteo.
- 
+Se gestionan eventos como la selección de un conjunto de números y la acción de comprobar si el usuario ha ganado a través de funciones como handleSelectSet y handleCheckWinner.
+**Gestionar el estado:**
+Se utiliza useState para manejar el estado de la selección de números (selectedSetIndex), el estado de ganancia (isWinner), y el conjunto de números sorteados (winningSet).
+**Actualizar un array en el estado:**
+Los números sorteados y seleccionados se almacenan en arrays dentro del estado, y se actualizan cuando el usuario interactúa con la aplicación.
+**Levantar el estado:**
+El estado relacionado con la selección de números y el resultado del sorteo se "levanta" al componente principal (App), que coordina la interacción entre los distintos componentes.
+**Efectos opcionales:**
+Aunque no se utiliza useEffect de manera avanzada en este ejemplo, se menciona para el posible uso de animaciones o la temporización entre el sorteo y la visualización de los resultados. Podrías expandir esto en el futuro.
