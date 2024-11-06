@@ -505,4 +505,48 @@ Facilita la Usabilidad: La transición suave y el estilo del cursor mejoran la e
 **¿Por qué es la mejor forma de implementarlo?**
 
 Esta estructura de CSS es modular y clara, separando los estados de normal y hover en estilos específicos. Esto permite ajustar los colores y los efectos sin afectar la funcionalidad general del botón. Además, el uso de transiciones y efectos de hover ayuda a mejorar la experiencia de usuario, haciéndola más amigable y profesional.
+
+### HABILIDADES
+
+**1. Escribir tu primer componente de React** 
+El componente App y el componente NumberSetsSelection son ejemplos de componentes básicos escritos en React, donde se permite al usuario seleccionar números y ver el resultado del sorteo.
+
+**2. Crear archivos con múltiples componentes**
+Se crearon varios componentes: App, NumberSetsSelection, y se sugirieron otros como WinningNumbers y Lottery para separar las funcionalidades.
+
+**3. Añadir marcado a JavaScript con JSX**
+Todo el código dentro de los componentes está escrito con JSX, que permite la mezcla de HTML y JavaScript. Se usan expresiones como {} para insertar variables y resultados dentro del marcado.
+
+**4. Añadir llaves con JSX**
+En JSX, se usan las llaves {} para insertar expresiones de JavaScript dentro del HTML, como los conjuntos de números y los resultados.
+
+**5. Configurar componentes con props**
+Los props se usan para pasar información entre los componentes. Por ejemplo, el componente NumberSetsSelection recibe el conjunto de números (numberSets) y una función para manejar la selección (handleSelectSet).
+
+**6. Renderizar condicionalmente**
+Se renderizan mensajes condicionales usando el valor de isWinner. Si el usuario gana, se muestra un mensaje; si no, otro mensaje.
+
+**7. Renderizar múltiples componentes a la vez**
+Se usa .map() para renderizar dinámicamente los botones correspondientes a cada conjunto de números disponibles.
+
+**8. Mantener componentes puros**
+Los componentes de selección de números no modifican directamente el estado. En cambio, el estado se maneja en el componente App y se pasa a los componentes secundarios mediante props.
+
+**9. Entender la UI como árboles**
+La estructura de los componentes está organizada de forma jerárquica. El componente principal (App) incluye otros componentes como NumberSetsSelection y los mensajes de resultados.
+
+**10. Controlar eventos del usuario**
+Se manejan eventos de usuario como la selección de números y el clic en el botón para comprobar si el usuario ha ganado.
+
+**11. Gestionar el estado**
+El estado de los números seleccionados, el conjunto ganador y el resultado del sorteo (si el usuario ganó o no) se gestionan usando el hook useState.
+
+**12. Actualizar un array en el estado**
+El estado de winningSet y selectedSetIndex se actualiza correctamente para reflejar el conjunto ganador y el conjunto seleccionado por el usuario.
+
+**13. Levantar el estado**
+El estado de los números seleccionados por el usuario y los resultados del sorteo se levantan al componente principal (App), y se pasan a los componentes secundarios como props.
+
+**14. Efectos opcionales**
+Se usa useEffect para generar aleatoriamente el conjunto ganador cuando se monta el componente, cumpliendo con el requisito de usar efectos para manejar el sorteo.
  
